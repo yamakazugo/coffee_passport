@@ -75,27 +75,27 @@
   </div>
   <%# /商品の概要 %>
 
-  <%# <div class="comment-box"> %>
-   <%# <% if user_signed_in? %> %>
-     <%# <%= form_with(model: [@post, @comment], local: true) do |form| %> %>
-       <%# <%= form.text_area :text, class:"comment-text" %> %>
-       <%# <%= form.submit "コメントする", class:"cmment-btn" %> %>
-     <%# <% end %> %>
-   <%# <% else %> %>
-     <%# <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong> %>
-   <%# <% end %> %>
-   <%# <div class="comments"> %>
-      <%# <h4>＜コメント一覧＞</h4> %>
-      <%# <% @comments.each do |comment| %> %>
-        <%# <p> %>
-          <%# <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong> %>
-          <%# <%= comment.text %> %>
+  <div class="comment-box">
+   <% if user_signed_in? %>
+     <%= form_with(model: [@post, @comment], local: true) do |form| %>
+       <%= form.text_area :text, class:"comment-text" %>
+       <%= form.submit "コメントする", class:"cmment-btn" %>
+     <% end %>
+   <% else %>
+     <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+   <% end %>
+   <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <%= comment.text %>
         </p>
-      <%# <% end %> %>
-    <%# </div> %>
-  <%# </div> %>
+      <% end %>
+    </div>
+  </div>
   
   
-<%# </div> %>
+</div>
 
 <%= render "shared/footer" %>
