@@ -11,18 +11,22 @@ class Post < ApplicationRecord
   belongs_to :body
   belongs_to :acidity
   belongs_to :processing
+ 
+  with_options presence: true do
+    validates :image
+    validates :name
+    validates :info
+    validates :text
+  end
 
-  validates :image, presence: true
-  validates :name, presence: true
-  validates :info, presence: true
-  validates :text, presence: true
+  with_options numericality: { other_than: 1, message: "Select" } do
+    validates :flavor_id
+    validates :region_id
+    validates :body_id
+    validates :acidity_id
+    validates :processing_id
+  end
 
-
-  validates :flavor_id, numericality: { other_than: 1 } 
-  validates :region_id, numericality: { other_than: 1 } 
-  validates :body_id, numericality: { other_than: 1 } 
-  validates :acidity_id, numericality: { other_than: 1 } 
-  validates :processing_id, numericality: { other_than: 1 } 
 
   def self.search(search)
     if search != ""

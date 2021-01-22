@@ -7,11 +7,11 @@
     <h2 class="items-sell-title">あなたの一杯教えて下さい！</h2>
     <%= form_with(model: @post, local: true) do |f| %>
     
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    
     <%= render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    
 
-    <%# 出品画像 %>
+    
     <div class="img-upload">
       <div class="weight-bold-text">
         出品画像
@@ -24,8 +24,7 @@
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
-    <%# /出品画像 %>
-    <%# 商品名と商品説明 %>
+    
     <div class="new-items">
       <div class="weight-bold-text">
         おすすめのコーヒー
@@ -40,9 +39,7 @@
         <%= f.text_area :info, class:"items-text", id:"item-info", placeholder:"コーヒーの感想（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-    <%# /商品名と商品説明 %>
-
-    <%# 商品の詳細 %>
+    
     <div class="items-detail">
       <div class="weight-bold-text">コーヒーの詳細</div>
       <div class="form">
@@ -78,27 +75,18 @@
         <%= f.text_area :text, class:"items-text", id:"post-text", placeholder:"例,シナモン,メープル,バター", maxlength:"40" %>
       </div>
     </div>          
-    <%# /商品の詳細 %>
-
-    <%# 配送について %>
+    
     <div class="items-detail">
     </div>
-    <%# /配送について %>
-
-    <%# 販売価格 %>
+    
     <div class="sell-price">
     </div>
-    <%# /販売価格 %>
-
-    <%# 注意書き %>
     
-    <%# /注意書き %>
-    <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "投稿する" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
-    <%# /下部ボタン %>
+    
   </div>
   <% end %>
 
@@ -108,7 +96,7 @@
     </ul>
     <%= link_to link_to 'COFFEE PASSPORT', root_path, class:"second-fotter-logo"%>
     <p class="inc">
-      <%# ©︎Furima,Inc. %>
+      
     </p>
   </footer>
 </div>

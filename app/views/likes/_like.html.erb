@@ -1,25 +1,9 @@
-<%# <p>いいね件数: </p> %>
+
 <% if  user_signed_in? %>
-<% if current_user.already_liked?(@post) %>
-  <%= link_to 'いいねを外す！', post_like_path(@post), method: :delete  %>
-   <%# <%= image_tag "star.png", class:"star-icon" %> 
-  
-<% else  %>
-  <%= link_to 'いいねをする！', post_likes_path(@post), method: :post  %>
-   <%# <%= image_tag "star.png", class:"star-icon" %> 
-  
-<% end %>
+  <% if current_user.already_liked?(@post) %>
+     <%= link_to 'いいねを外す！', post_like_path(@post), method: :delete  %> 
+  <% else  %>
+    <%= link_to 'いいねをする！', post_likes_path(@post), method: :post  %> 
+  <% end %>
 <% end %>
 <%= "いいね！#{@post.likes.count}" %>
-<%# <p>いいねしたユーザー</p> %>
-<%# <% @post.liked_users.each do |user| %> 
-  <%# <li><%= user.nick/name</li> %> 
-<%# <% end %> 
-
-
-
- <%# <div class="favorite-btn"> %>
-        
- <%# <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%> 
-<%# <span>いいね！ 0</span> %>
-      <%# </div> %>
