@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only:[:new, :create]
+  before_action :move_to_index, except: [:index, :show, ]
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -20,6 +20,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   def edit
@@ -50,6 +52,12 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:image, :name, :info, :flavor_id, :region_id, :body_id, :acidity_id, :processing_id, :text).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 
