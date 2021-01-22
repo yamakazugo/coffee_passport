@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CoffeePassport</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>COFFEE PASAPORT</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
+  <%= stylesheet_link_tag 'application', media: 'all'%>
+  <%= javascript_pack_tag 'application' %>
+  <script src="https://kit.fontawesome.com/d8f31e6448.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <%= yield %>
+</body>
+
 </html>
