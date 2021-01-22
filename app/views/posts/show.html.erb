@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<%# 商品の概要 %>
+
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
@@ -12,19 +12,14 @@
     </div>
     
     <% if user_signed_in? %>
-    <%# ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
+   
       <% if current_user.id == @post.user.id%>
        <%= link_to '投稿の編集', edit_post_path, method: :get, class: "item-red-btn" %>
        <p class='or-text'>or</p>
        <%= link_to '削除', post_path, method: :delete, class:'item-destroy' %>
       <% end %>
     <% end %>     
-    <%# 商品が売れていない場合はこちらを表示しましょう %>
-    <%# <%= link_to '購入画面に進む', "#" ,class:"item-red-btn"%> 
-    <%# //商品が売れていない場合はこちらを表示しましょう %>
-
-
-    <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
+    
 
     <div class="item-explain-box">
       <span><%= @post.info %></span>
@@ -67,13 +62,13 @@
         <%= image_tag "star.png", class:"star-icon" %>
         <span> </span>
         <%= render 'likes/like' %>
-        <%# <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%> 
+        
         
       </div>
       
     </div>
   </div>
-  <%# /商品の概要 %>
+  
 
   <div class="comment-box">
    <% if user_signed_in? %>
