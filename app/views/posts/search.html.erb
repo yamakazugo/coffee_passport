@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+<%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+<ul class='item-lists'>    
+     <% @posts.each do |post| %>
+      <li class='list'>
+         <%= link_to post_path(post.id), method: :get do %>
+            <div class='item-img-content'>
+                <%= image_tag post.image, class: "item-img" %>
+            </div>
+            <div class='item-info'>
+               <h3 class='item-name'>
+                   <%= post.name %>
+               </h3>
+                <div class='item-price'>
+                   <span><%= post.info %></span>
+                </div> 
+                <div class='star-btn'>
+                    <%= image_tag "star.png", class:"star-icon" %>
+                    <span><%= "#{post.likes.count} いいね！" %></span>
+                </div>
+             </div>
+         <% end %>
+      </li>
+    <% end %> 
+ </ul>

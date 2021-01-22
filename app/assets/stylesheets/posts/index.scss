@@ -9,7 +9,8 @@ a {
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .title-contents {
   width: 100vw;
-  background-image: image-url('furima-header01.png');
+  height: 50vw;
+  background-image: image-url('IMG_3419.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -245,7 +246,9 @@ a {
 }
 
 .item-lists>.list {
-  width: 37vh;
+  border: 1px solid gray;
+  margin: 5px;
+  width: 43vh;
   padding: 1vw;
   background-color: #FFF;
 }
@@ -256,8 +259,8 @@ a {
 }
 
 .item-img {
-  width: 33vh;
-  height: 33vh;
+  width: 40vh;
+  height: 40vh;
 }
 
 .sold-out {
@@ -302,6 +305,7 @@ a {
   height: 2vh;
   width: 2vh;
   margin-right: 0.5vw;
+  
 }
 
 .star-count {
@@ -310,6 +314,22 @@ a {
 
 .fa-coffee {
   font-size: 70px;
+}
+
+.search-form {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.search-form .search-input {
+  width: 60%;
+  margin-right: 10px;
+}
+
+.search-form .search-btn {
+  width: 10%;
 }
 
 /* //商品一覧 */
