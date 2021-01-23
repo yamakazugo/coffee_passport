@@ -55,7 +55,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:image, :name, :info, :flavor_id, :region_id, :body_id, :acidity_id, :processing_id, :text).merge(user_id: current_user.id)
   end
 
-  def set_item
+  def set_post
     @post = Post.find(params[:id])
   end
 
