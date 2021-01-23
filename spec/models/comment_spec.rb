@@ -22,4 +22,5 @@ RSpec.describe Comment, type: :model do
     @comment.valid?
     expect(@comment.errors.full_messages).to include("Post must exist")
   end
+
 end
