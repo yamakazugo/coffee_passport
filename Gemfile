@@ -63,3 +63,4 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pry-rails'
+gem "aws-sdk-s3", require: false
