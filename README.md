@@ -1,4 +1,37 @@
-# テーブル設計
+# Portfolio name : COFFEE PASSPORT
+
+好きなコーヒについての情報交換ができる事を想定して
+作った投稿サイトです。
+
+# Url: http://52.192.43.78/
+
+# ID/Pass
+
+* ID: kazugo
+* Pass: 0634
+* テスト用アカウント
+  メールアドレス: sutaba3@gmail.com
+  パスワード: sutaba3150
+* Githubリポジトリ: https://github.com/yamakazugo/coffee_passport
+
+
+# Description
+
+新規アカウントを作ってご自身の好きなコーヒーの情報を投稿する。
+マイページで投稿の管理もでき、いいね！機能やコメント機能もつけて
+SNS的なアプリケーションです。
+
+# Demo
+
+*ユーザー管理機能：アカウント情報を管理する。
+*いいね！機能：ログインユーザーが、投稿にいいね！できる。
+*コメント機能：ログインユーザーが、投稿にコメントできる
+*bootstrap,active_hash,kaminari,のGemでアプリに動きをつけている。
+*AWSのS3,EC2を使い、写真の管理、自動デプロイができる。
+
+
+
+# DB設計
 
 ## users テーブル
 
@@ -35,7 +68,7 @@
 
 - belongs_to :user
 - has_many :comments, dependent: :destroy
-- has_many :likes
+- has_many :likes, dependent: :destroy
 - has_many :liked_users, through: :likes, source: :user
 
 
