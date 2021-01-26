@@ -10,7 +10,7 @@
 * ID: kazugo
 * Pass: 0634
 * テスト用アカウント
-  メールアドレス: sutaba3@gmail.com
+  メールアドレス: sutaba@gmail.com
   パスワード: sutaba3150
 * Githubリポジトリ: https://github.com/yamakazugo/coffee_passport
 
@@ -26,7 +26,7 @@ SNS的なアプリケーションです。
 *ユーザー管理機能：アカウント情報を管理する。
 *いいね！機能：ログインユーザーが、投稿にいいね！できる。
 *コメント機能：ログインユーザーが、投稿にコメントできる
-*bootstrap,active_hash,kaminari,のGemでアプリに動きをつけている。
+*bootstrap,active_hash,kaminari,のGemでアプリに動きをつけました。
 *AWSのS3,EC2を使い、写真の管理、自動デプロイができる。
 
 
