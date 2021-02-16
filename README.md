@@ -1,5 +1,6 @@
 # Portfolio name : COFFEE PASSPORT
 
+COFFEE PASSPORT.png
 
 好きなコーヒについての情報交換ができる事を想定して
 作った投稿サイトです。
