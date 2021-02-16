@@ -1,6 +1,5 @@
 # Portfolio name : COFFEE PASSPORT
 
-![画像名](https://github.com/quin001cunx/newRead/blob/master/COFFEE PASSPORT.png)
 
 好きなコーヒについての情報交換ができる事を想定して
 作った投稿サイトです。
