@@ -35,6 +35,7 @@ SNS的なアプリケーションです。
 * コメント機能：ログインユーザーが、投稿にコメントできる
 ![ab39f7c3d94c46c1c275dacea38a8ebf](https://user-images.githubusercontent.com/73051044/108168545-d590a380-713a-11eb-843d-479e94c4b79e.gif)
 * bootstrap,active_hash,kaminari,のGemでアプリに動きをつけました。
+![5434e06e6c32ab9c8cfba1eac547802e](https://user-images.githubusercontent.com/73051044/108169273-d70e9b80-713b-11eb-8fe3-cfa1f988ee70.gif)
 * AWSのS3,EC2を使い、写真の管理、自動デプロイができる。
 
 # 制作背景(意図)
