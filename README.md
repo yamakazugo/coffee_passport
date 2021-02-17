@@ -38,7 +38,7 @@ SNS的なアプリケーションです。
 
 # DB設計
 
-## users テーブル
+## users table
 
 | Column                  | Type   | Options     |
 | ----------------------- | ------ | ----------- |
@@ -54,7 +54,7 @@ SNS的なアプリケーションです。
 - has_many :likes, dependent: :destroy
 - has_many :liked_posts, through: :likes, source: :post
 
-## posts テーブル
+## posts table
 
 | Column                  | Type        | Options                        |
 | ----------------------- | ---------   | ------------------------------ |
@@ -77,7 +77,7 @@ SNS的なアプリケーションです。
 - has_many :liked_users, through: :likes, source: :user
 
 
-## likes テーブル
+## likes table
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
