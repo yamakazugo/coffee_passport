@@ -23,6 +23,8 @@
 マイページで投稿の管理もでき、いいね！機能やコメント機能もつけて
 SNS的なアプリケーションです。
 
+![6a285a718e3e30844da0ff87aed9d351](https://user-images.githubusercontent.com/73051044/108161607-b7bd4180-712e-11eb-8372-6f40c5aab30a.gif)
+
 * 動画：https://gyazo.com/2d6c996da083da8fc788b99c4440f5ce
 
 # Demo
