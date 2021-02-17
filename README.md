@@ -29,6 +29,7 @@ SNS的なアプリケーションです。
 # Demo
 
 * ユーザー管理機能：アカウント情報を管理する。
+![7a8d7a9db7ff42c461fb3150cd57c689](https://user-images.githubusercontent.com/73051044/108166631-ccea9e00-7137-11eb-8844-1e6647c9051b.gif)
 * いいね！機能：ログインユーザーが、投稿にいいね！できる。
 * コメント機能：ログインユーザーが、投稿にコメントできる
 * bootstrap,active_hash,kaminari,のGemでアプリに動きをつけました。
