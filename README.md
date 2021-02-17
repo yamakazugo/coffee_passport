@@ -31,6 +31,7 @@ SNS的なアプリケーションです。
 * ユーザー管理機能：アカウント情報を管理する。
 ![7a8d7a9db7ff42c461fb3150cd57c689](https://user-images.githubusercontent.com/73051044/108166631-ccea9e00-7137-11eb-8844-1e6647c9051b.gif)
 * いいね！機能：ログインユーザーが、投稿にいいね！できる。
+![0b927e233c245be0ed4c7faad9e1d1e7](https://user-images.githubusercontent.com/73051044/108167450-0a9bf680-7139-11eb-8df6-e1c28f7cbabd.gif)
 * コメント機能：ログインユーザーが、投稿にコメントできる
 * bootstrap,active_hash,kaminari,のGemでアプリに動きをつけました。
 * AWSのS3,EC2を使い、写真の管理、自動デプロイができる。
